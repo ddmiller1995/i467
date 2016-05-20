@@ -1,0 +1,12 @@
+1. Design the HUD as either a prim, an image, or using HTML
+	a. Ensure correct positioning and size of HUD
+	b. Display an image of the 10 items, each with a name
+	c. Make each item's box clickable (forces HTML method?)
+	d. Clicking a box will show the distance between the owner and that item
+		- First get owner's location, then lookup coordinates of specified item from stored data structure
+		- Calculate Euclidean distance and display it, updating every second 
+2. In the default state, have the script initialize in the state_entry event
+3. User uses specified distance behavior to locate item
+4. Either detect user finding an item by the distance between dropping to a specified low value, or somehow
+   networking a script listening for a click event in the item to the owner's script.
+5. Update HUD by graying out box of item found and changing distance to a congratulator message
